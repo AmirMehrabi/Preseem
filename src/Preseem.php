@@ -11,6 +11,11 @@ class Preseem
 
     private $api_key = '';
 
+    /**
+     * __construct method
+     *
+     * @return void
+     */
     public function __construct()
     {
         global $api_url;
@@ -31,6 +36,15 @@ class Preseem
         return 'Unrecognized Response: ' . json_encode(array($verb, $method, $response_code));
     }
 
+    /**
+     * send the request to preseem api
+     *
+     * @param  mixed $object
+     * @param  mixed $__URI
+     * @param  mixed $action
+     * @param  mixed $params
+     * @return void
+     */
     private function send($object = '', $__URI = '', $action = '', $params = array())
     {
 
@@ -143,6 +157,14 @@ class Preseem
         return true;
     }
 
+    /**
+     * list method will list all of your entities in preseem (sites, packages, access points, etc)
+     *
+     * @param  mixed $object
+     * @param  mixed $page
+     * @param  mixed $limit
+     * @return void
+     */
     function list($object, $page = 1, $limit = 500) {
         $this->logger('INFO', json_encode(['object' => $object]));
         return $this->send($object, ($object . '?' . http_build_query(['page' => $page, 'limit' => $limit])), 'LIST');
@@ -152,11 +174,26 @@ class Preseem
         $this->logger('INFO', json_encode(['object' => $object, $params]));
         return $this->send($object, ($object . '/' . rawurlencode($params['id'])), 'CREATE', $params);
     }
+    /**
+     * delete method will delete your entity in preseem
+     *
+     * @param  mixed $object
+     * @param  mixed $id
+     * @return void
+     */
     public function delete($object, $id)
     {
         $this->logger('INFO', json_encode(['object' => $object, 'id' => $id]));
         return $this->send($object, ($object . '/' . rawurlencode($id)), 'DELETE');
     }
+
+    /**
+     * get method will list your entity in preseem
+     *
+     * @param  mixed $object
+     * @param  mixed $id
+     * @return void
+     */
     public function get($object, $id)
     {
         $this->logger('INFO', json_encode(['object' => $object, 'id' => $id]));
@@ -166,6 +203,12 @@ class Preseem
         return $results;
     }
 
+    /**
+     * api_access_points_create will create new access points in preseem
+     *
+     * @param  mixed $params
+     * @return void
+     */
     public function api_access_points_create($params = array())
     {
         $messages = array();
@@ -185,6 +228,12 @@ class Preseem
         return $this->create('access_points', $params);
     }
 
+    /**
+     * api_accounts_create method will create new accounts in preseem
+     *
+     * @param  mixed $params
+     * @return void
+     */
     public function api_accounts_create($params = array())
     {
         $messages = array();
@@ -198,6 +247,12 @@ class Preseem
         return $this->create('accounts', $params);
     }
 
+    /**
+     * api_packages_create method will create new packages in preseem
+     *
+     * @param  mixed $params
+     * @return void
+     */
     public function api_packages_create($params = array())
     {
         $messages = array();
@@ -217,6 +272,12 @@ class Preseem
         return $this->create('packages', $params);
     }
 
+    /**
+     * api_services_create method will create new services in preseem
+     *
+     * @param  mixed $params
+     * @return void
+     */
     public function api_services_create($params = array())
     {
         $messages = array();
@@ -251,6 +312,12 @@ class Preseem
         return !empty($messages) ? json_encode($messages) . $this->logger('FATAL', 'Missing Data: ' . json_encode($messages)) : $this->create('services', $params);
     }
 
+    /**
+     * api_sites_create method will create new sites in preseem
+     *
+     * @param  mixed $params
+     * @return void
+     */
     public function api_sites_create($params = array())
     {
         $messages = array();
@@ -264,6 +331,13 @@ class Preseem
         return $this->create('sites', $params);
     }
 
+    /**
+     * Logs your messages into storage/logs/preseem.log filr
+     *
+     * @param  mixed $error_level
+     * @param  mixed $message
+     * @return void
+     */
     public function logger($error_level = 'info', $message)
     {
         global $timestamp;
