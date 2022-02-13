@@ -1,7 +1,7 @@
 # Very short description of the package
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/AmirMehrabi/preseem.svg?style=flat-square)](https://packagist.org/packages/AmirMehrabi/preseem)
-[![Total Downloads](https://img.shields.io/packagist/dt/AmirMehrabi/preseem.svg?style=flat-square)](https://packagist.org/packages/AmirMehrabi/preseem)
-![GitHub Actions](https://github.com/AmirMehrabi/preseem/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/amoori/preseem.svg?style=flat-square)](https://packagist.org/packages/amoori/preseem)
+[![Total Downloads](https://img.shields.io/packagist/dt/amoori/preseem.svg?style=flat-square)](https://packagist.org/packages/amoori/preseem)
+![GitHub Actions](https://github.com/amoori/preseem/actions/workflows/main.yml/badge.svg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 

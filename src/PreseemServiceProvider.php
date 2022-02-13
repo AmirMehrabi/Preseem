@@ -18,6 +18,7 @@ class PreseemServiceProvider extends ServiceProvider
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'preseem');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
+        
         $this->publishes([
             __DIR__.'/config/config.php' => config_path('preseem.php'),
         ]);
