@@ -15,7 +15,7 @@ composer require amoori/preseem
 ## Usage
 
 ```
-// php artisan vendor:publish
+ php artisan vendor:publish
 ```
 Add your Preseem API to config/preseem.php file.
 
