@@ -14,11 +14,12 @@ composer require amoori/preseem
 
 ## Usage
 
-```php artisan vendor:publish
-// Usage description here
 ```
-Then just edit your config/preseem.php config file and you're good to go.
+// php artisan vendor:publish
+```
+Add your Preseem API to config/preseem.php file.
 
+Check the "examples" directory to figure out how to use it.
 
 
 ### Changelog
@@ -31,12 +32,10 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 If you discover any security related issues, please email aut0run2011@gmail.com instead of using the issue tracker.
 
 ## Credits
--   [Amir Mehrabian](https://github.com/AmirMehrabi)
--   [All Contributors](../../contributors)
+This package was created on top of the [Preseem_API](https://github.com/jimlucas/Preseem_API/tree/master). Special thanks to [Jim Lucal](https://github.com/jimlucas)
 
 ## License
 The GNU AGPLv. Please see [License File](LICENSE.md) for more information.
 
-## Preseem_API
-This package was created on top of the [Preseem_API](https://github.com/jimlucas/Preseem_API/tree/master). Special thanks to [Jim Lucal](https://github.com/jimlucas)
+
 
