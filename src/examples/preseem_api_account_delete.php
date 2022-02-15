@@ -6,4 +6,4 @@ $api = new Preseem();
 
 p($api->_api_delete('accounts', 'CustomerName_1234'));
 
-p($api->_api_list('accounts'));
+p($api->list('accounts'));

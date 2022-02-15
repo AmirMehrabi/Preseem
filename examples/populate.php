@@ -8,12 +8,12 @@ if ( false )
 {
   foreach (array('access_points', 'accounts', 'packages', 'services', 'sites') AS $object)
   {
-    $results = $api->_api_list($object);
+    $results = $api->list($object);
     foreach ($results->data AS $item)
     {
-      $api->_api_delete($object, $item->id);
+      $api->delete($object, $item->id);
     }
-    print_r($api->_api_list($object));
+    print_r($api->list($object));
   }
 }
 
@@ -33,5 +33,5 @@ if ( false )
     ]);
   }
 }
-print_r($api->_api_list('accounts'));
-print_r($api->_api_list('services'));
+print_r($api->list('accounts'));
+print_r($api->list('services'));

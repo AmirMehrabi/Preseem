@@ -6,4 +6,4 @@ $api = new Preseem();
 
 p($api->_api_delete('packages', 'Gold Package'));
 
-p($api->_api_list('packages'));
+p($api->list('packages'));

@@ -1,4 +1,4 @@
-# Very short description of the package
+# A package for managing your Preseem account through your laravel application
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/amoori/preseem.svg?style=flat-square)](https://packagist.org/packages/amoori/preseem)
 [![Total Downloads](https://img.shields.io/packagist/dt/amoori/preseem.svg?style=flat-square)](https://packagist.org/packages/amoori/preseem)
 ![GitHub Actions](https://github.com/amoori/preseem/actions/workflows/main.yml/badge.svg)

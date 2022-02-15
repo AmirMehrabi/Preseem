@@ -9,4 +9,4 @@ p($api->api_accounts_create([
   'name' => 'Customer Name',
 ]));
 
-p($api->_api_list('accounts'));
+p($api->list('accounts'));

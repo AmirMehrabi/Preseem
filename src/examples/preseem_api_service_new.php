@@ -17,5 +17,5 @@ p($api->api_services_create([
   'attachments' => array($attachment),
 ]));
 
-p($api->_api_list('services'));
+p($api->list('services'));
 

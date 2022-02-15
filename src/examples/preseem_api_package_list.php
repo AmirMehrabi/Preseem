@@ -4,4 +4,4 @@ include_once __DIR__ . '/../init.php';
 
 $api = new Preseem();
 
-p($api->_api_list('packages'));
+p($api->list('packages'));

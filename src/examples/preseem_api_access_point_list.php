@@ -4,4 +4,4 @@ include_once __DIR__ . '/../init.php';
 
 $api = new Preseem();
 
-p($api->_api_list('access_points'));
+p($api->list('access_points'));

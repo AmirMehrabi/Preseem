@@ -11,5 +11,5 @@ p($api->api_access_points_create([
   'ip_address' => '192.168.10.10',
 ]));
 
-p($api->_api_get('access_points', '10'));
+p($api->get('access_points', '10'));
 
